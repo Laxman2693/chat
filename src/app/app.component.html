@@ -1,0 +1,37 @@
+<mat-card class="chat-card">
+  <mat-card-header class="chat-header">
+    <span class="float-left blue-text">Your Dairy</span>
+    <span class="float-right blue-text"
+      ><mat-icon> arrow_right_alt</mat-icon></span
+    >
+  </mat-card-header>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label class="text-area">Write something</mat-label>
+    <textarea [(ngModel)]="chatText" class="text-area" matInput></textarea>
+  </mat-form-field>
+  <div class="footer">
+    <mat-icon
+      class="float-left blue-text"
+      (click)="toggled = !toggled"
+      [(emojiPickerIf)]="toggled"
+      [emojiPickerDirection]="'top'"
+      (emojiPickerSelect)="handleSelection($event)"
+      >sentiment_satisfied</mat-icon
+    >
+    <button
+      mat-flat-button
+      color="success"
+      style="float: right"
+      (click)="saveChat()"
+    >
+      Save
+    </button>
+  </div>
+  <mat-card *ngFor="let item of chatArray" class="chat-list">
+    <div class="blue-text">
+      <mat-icon>date_range</mat-icon>
+      {{ item.time | date: "h:mm a |  MMMM d, y" }}
+    </div>
+    <div>{{ item.content }}</div>
+  </mat-card>
+</mat-card>

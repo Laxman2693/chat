@@ -1,0 +1,50 @@
+.chat-card {
+    height: auto;
+    width: 50vh;
+    background-color: rgba(255, 255, 255, 0.865);
+    color: black;
+}
+.mat-icon {
+    vertical-align: middle;
+}
+
+.mat-card{
+  display:flex;
+  flex-direction: column;
+}
+
+.chat-header {
+    display: inline-block;
+}
+
+.footer {
+    display: inline-block;
+}
+
+.text-area {
+color: rgba(48, 46, 46, 0.755);
+}
+
+.mat-success {
+    background-color: hsl(215deg 54% 29%);
+    color: #fff;
+    border-radius: 25px;
+    width: 20%;
+}
+
+.blue-text {
+    color: hsl(231deg 49% 52%)
+}
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+.chat-list {
+    margin: 2%;
+    padding: 2%;
+    background-color: hsl(210deg 14% 97%);
+}
